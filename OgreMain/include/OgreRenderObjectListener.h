@@ -40,8 +40,10 @@ namespace Ogre {
     /** Abstract interface which classes must implement if they wish to receive
         events from the scene manager when single object is about to be rendered. 
     */
-	class _OgreExport RenderObjectListener
+	class _OgreExport RenderObjectListener : public CLRObject
 	{
+	public:
+       DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderObjectListener);
 	public:
 		virtual ~RenderObjectListener() {}
 		/** Event raised when render single object started.

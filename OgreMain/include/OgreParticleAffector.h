@@ -60,8 +60,11 @@ namespace Ogre {
         with literally infinite combinations of affector and affector types, and parameters within those
         types.
     */
-    class _OgreExport ParticleAffector : public StringInterface, public FXAlloc
+    class _OgreExport ParticleAffector : public StringInterface, public FXAlloc, public CLRObject
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ParticleAffector);
+		
     protected:
         /// Name of the type of affector, MUST be initialised by subclasses
         String mType;

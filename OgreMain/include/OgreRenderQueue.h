@@ -89,9 +89,11 @@ namespace Ogre {
             backgrounds and overlays, and also could be used in the future for more
             complex multipass routines like stenciling.
     */
-    class _OgreExport RenderQueue : public RenderQueueAlloc
+    class _OgreExport RenderQueue : public RenderQueueAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderQueue);
+		
         typedef map< uint8, RenderQueueGroup* >::type RenderQueueGroupMap;
         /// Iterator over queue groups
         typedef MapIterator<RenderQueueGroupMap> QueueGroupIterator;

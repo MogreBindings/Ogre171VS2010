@@ -67,10 +67,12 @@ namespace Ogre {
         don't want the overlay displayed in the smaller viewports. You turn this off for 
         a specific viewport by calling the Viewport::setDisplayOverlays method.
     */
-	class _OgreExport Overlay : public OverlayAlloc
+	class _OgreExport Overlay : public OverlayAlloc, public CLRObject
     {
 
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Overlay);
+		
               typedef list<OverlayContainer*>::type OverlayContainerList;
     protected:
         String mName;

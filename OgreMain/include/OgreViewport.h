@@ -53,9 +53,11 @@ namespace Ogre {
             viewport on a single render target and they overlap, one must
             obscure the other in some predetermined way.
     */
-	class _OgreExport Viewport : public ViewportAlloc
+	class _OgreExport Viewport : public ViewportAlloc, public CLRObject
     {
-    public:       
+    public:  
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Viewport);
+		
         /** The usual constructor.
             @param
                 cam Pointer to a camera to be the source for the image.

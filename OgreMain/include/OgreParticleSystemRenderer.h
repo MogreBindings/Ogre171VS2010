@@ -46,9 +46,11 @@ namespace Ogre {
 	/** Abstract class defining the interface required to be implemented
         by classes which provide rendering capability to ParticleSystem instances.
     */
-    class _OgreExport ParticleSystemRenderer : public StringInterface, public FXAlloc
+    class _OgreExport ParticleSystemRenderer : public StringInterface, public FXAlloc, public CLRObject
     {
     public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ParticleSystemRenderer);
+		 
         /// Constructor
         ParticleSystemRenderer() {}
         /// Destructor

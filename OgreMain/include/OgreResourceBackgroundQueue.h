@@ -49,6 +49,8 @@ namespace Ogre {
 	/** Encapsulates the result of a background queue request */
 	struct BackgroundProcessResult
 	{
+		DECLARE_CLRHANDLE;
+		
 		/// Whether an error occurred
 		bool error;
 		/// Any messages from the process

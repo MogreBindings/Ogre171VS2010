@@ -52,6 +52,8 @@ namespace Ogre {
 	class _OgreExport PatchSurface : public PatchAlloc
     {
     public:
+		DECLARE_CLRHANDLE;
+		
         PatchSurface();
         ~PatchSurface();
 

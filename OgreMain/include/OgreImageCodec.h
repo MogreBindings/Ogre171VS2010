@@ -47,12 +47,16 @@ namespace Ogre {
     class _OgreExport ImageCodec : public Codec
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ImageCodec);
+		 
         virtual ~ImageCodec();
         /** Codec return class for images. Has information about the size and the
             pixel format of the image. */
         class _OgrePrivate ImageData : public Codec::CodecData
         {
         public:
+			 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ImageCodec_ImageData);
+		
 			ImageData():
 				height(0), width(0), depth(1), size(0),
 				num_mipmaps(0), flags(0), format(PF_UNKNOWN)

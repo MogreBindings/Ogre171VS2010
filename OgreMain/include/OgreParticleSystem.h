@@ -66,7 +66,8 @@ namespace Ogre {
     class _OgreExport ParticleSystem : public StringInterface, public MovableObject
     {
     public:
-
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ParticleSystem);
+		
         /** Command object for quota (see ParamCommand).*/
         class _OgrePrivate CmdQuota : public ParamCommand
         {

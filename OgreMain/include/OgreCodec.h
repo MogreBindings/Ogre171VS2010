@@ -52,8 +52,10 @@ namespace Ogre {
             The codec concept is a pretty generic one - you can easily understand
             how it can be used for images, sounds, archives, even compressed data.
     */
-	class _OgreExport Codec : public CodecAlloc
+	class _OgreExport Codec : public CodecAlloc, public CLRObject
     {
+	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Codec);
     protected:
         typedef map< String, Codec* >::type CodecList; 
         /** A map that contains all the registered codecs.
@@ -61,9 +63,11 @@ namespace Ogre {
         static CodecList ms_mapCodecs;
 
     public:
-        class _OgrePrivate CodecData : public CodecAlloc
+        class _OgrePrivate CodecData : public CodecAlloc, public CLRObject
         {
         public:
+			DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Codec_CodecData);
+			
             virtual ~CodecData() {};
 
             /** Returns the type of the data.

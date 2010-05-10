@@ -68,8 +68,11 @@ namespace Ogre {
         with literally infinite combinations of emitter and affector types, and paramters within those
         types.
     */
-    class _OgreExport ParticleEmitter : public StringInterface, public Particle
+    class _OgreExport ParticleEmitter : public StringInterface, public Particle, public CLRObject
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ParticleEmitter);
+		
     protected:
 
         // Command object for setting / getting parameters

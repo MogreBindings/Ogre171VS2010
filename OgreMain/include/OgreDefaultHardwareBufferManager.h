@@ -102,6 +102,8 @@ namespace Ogre {
 	class _OgreExport DefaultHardwareBufferManagerBase : public HardwareBufferManagerBase
 	{
     public:
+        DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(DefaultHardwareBufferManagerBase);
+    public:
         DefaultHardwareBufferManagerBase();
         ~DefaultHardwareBufferManagerBase();
         /// Creates a vertex buffer

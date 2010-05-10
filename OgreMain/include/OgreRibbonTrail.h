@@ -70,6 +70,8 @@ namespace Ogre {
 	class _OgreExport RibbonTrail : public BillboardChain, public Node::Listener
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RibbonTrail);
+		
 		/** Constructor (don't use directly, use factory) 
 		@param name The name to give this object
 		@param maxElements The maximum number of elements per chain
@@ -225,6 +227,9 @@ namespace Ogre {
 	/** Factory object for creating RibbonTrail instances */
 	class _OgreExport RibbonTrailFactory : public MovableObjectFactory
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RibbonTrailFactory);
+		
 	protected:
 		MovableObject* createInstanceImpl( const String& name, const NameValuePairList* params);
 	public:

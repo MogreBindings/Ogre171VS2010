@@ -52,6 +52,9 @@ namespace Ogre {
     */
 	class _OgreExport Technique : public TechniqueAlloc
     {
+	public:
+		DECLARE_CLRHANDLE;
+		
     protected:
         // illumination pass state type
         enum IlluminationPassesState
@@ -121,6 +124,8 @@ namespace Ogre {
 		/// Rule controlling whether technique is deemed supported based on GPU vendor
 		struct GPUVendorRule
 		{
+			DECLARE_CLRHANDLE;
+			
 			GPUVendor vendor;
 			IncludeOrExclude includeOrExclude;
 			GPUVendorRule()
@@ -131,6 +136,8 @@ namespace Ogre {
 		/// Rule controlling whether technique is deemed supported based on GPU device name
 		struct GPUDeviceNameRule
 		{
+			DECLARE_CLRHANDLE;
+			
 			String devicePattern;
 			IncludeOrExclude includeOrExclude;
 			bool caseSensitive;

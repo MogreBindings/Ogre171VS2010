@@ -118,9 +118,11 @@ namespace Ogre
 	@version
 	1.0
 	*/
-	class _OgreExport RenderSystem : public RenderSysAlloc
+	class _OgreExport RenderSystem : public RenderSysAlloc, public CLRObject
 	{
 	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderSystem);
+		 
 		/** Default Constructor.
 		*/
 		RenderSystem();

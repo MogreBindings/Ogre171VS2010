@@ -322,6 +322,9 @@ namespace Ogre {
     */
     class _OgreExport RenderPriorityGroup : public RenderQueueAlloc
     {
+	public:
+		DECLARE_CLRHANDLE;
+		
 	protected:
 
 		/// Parent queue group
@@ -465,6 +468,8 @@ namespace Ogre {
     class _OgreExport RenderQueueGroup : public RenderQueueAlloc
     {
     public:
+		DECLARE_CLRHANDLE;
+		
         typedef map<ushort, RenderPriorityGroup*, std::less<ushort> >::type PriorityMap;
         typedef MapIterator<PriorityMap> PriorityMapIterator;
         typedef ConstMapIterator<PriorityMap> ConstPriorityMapIterator;

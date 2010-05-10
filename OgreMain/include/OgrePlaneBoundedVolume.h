@@ -48,6 +48,8 @@ namespace Ogre {
     class _OgreExport PlaneBoundedVolume
     {
     public:
+		DECLARE_CLRHANDLE;
+		
         typedef vector<Plane>::type PlaneList;
         /// Publicly accessible plane list, you can modify this direct
         PlaneList planes;

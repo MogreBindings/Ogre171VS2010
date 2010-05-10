@@ -49,8 +49,11 @@ namespace Ogre {
         vertex buffers (not necessarily one buffer, but the positions for the entire geometry 
         should come from one buffer if possible)
     */
-    class _OgreExport ShadowRenderable : public Renderable, public ShadowDataAlloc
+    class _OgreExport ShadowRenderable : public Renderable, public ShadowDataAlloc, public CLRObject
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ShadowRenderable);
+		
     protected:
         MaterialPtr mMaterial;
         RenderOperation mRenderOp;
@@ -106,9 +109,11 @@ namespace Ogre {
 
     /** This class defines the interface that must be implemented by shadow casters.
     */
-    class _OgreExport ShadowCaster
+    class _OgreExport ShadowCaster : public CLRObject
     {
     public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ShadowCaster);
+		 
         virtual ~ShadowCaster() { }
         /** Returns whether or not this object currently casts a shadow. */
         virtual bool getCastShadows(void) const = 0;

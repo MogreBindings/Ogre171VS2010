@@ -59,8 +59,11 @@ namespace Ogre {
             the same time as their parent Entity by the SceneManager method
             createEntity.
     */
-    class _OgreExport SubEntity: public Renderable, public SubEntityAlloc
+    class _OgreExport SubEntity: public Renderable, public SubEntityAlloc, public CLRObject
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SubEntity);
+		 
         // Note no virtual functions for efficiency
         friend class Entity;
         friend class SceneManager;

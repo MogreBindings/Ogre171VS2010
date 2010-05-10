@@ -51,6 +51,9 @@ namespace Ogre {
     */
     class _OgreExport HardwarePixelBuffer : public HardwareBuffer
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(HardwarePixelBuffer);
+		
     protected: 
         // Extents
         size_t mWidth, mHeight, mDepth;

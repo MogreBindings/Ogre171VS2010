@@ -379,7 +379,7 @@ namespace Ogre {
 		{ 
 			// we have to assume that hash needs recalculating on non-const
 			dirtyHash();
-			return mList.const_iterator(n); 
+			return mList.at(n);
 		}
 		const_reference at(size_type n) const { return mList.at(n); }
 		HashedVector() : mListHash(0), mListHashDirty(false) {}
@@ -490,6 +490,18 @@ namespace Ogre {
 			if (recalc)
 				dirtyHash();
 		}
+		
+		void assign(size_type n, const T& u)
+        {
+			mList.assign(n, u);
+        }
+
+       template <class InputIterator>
+       void assign(InputIterator first, InputIterator last)
+       {
+          mList.assign(first, last);
+       }
+
 
 		bool operator==(const HashedVector<T>& b)
 		{ return mListHash == b.mListHash; }

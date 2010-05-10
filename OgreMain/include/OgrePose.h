@@ -51,9 +51,11 @@ namespace Ogre {
 		Pose instances can be referred to by keyframes in VertexAnimationTrack in
 		order to animate based on blending poses together.
 	*/
-	class _OgreExport Pose : public AnimationAlloc
+	class _OgreExport Pose : public AnimationAlloc, public CLRObject
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Pose);
+		
 		/** Constructor
 			@param target The target vertexdata index (0 for shared, 1+ for 
 				dedicated at the submesh index + 1)

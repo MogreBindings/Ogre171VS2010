@@ -54,9 +54,11 @@ namespace Ogre {
         Each OverlayElementFactory creates a single type of OverlayElement, 
         identified by a 'type name' which must be unique.
     */
-	class _OgreExport OverlayElementFactory : public OverlayAlloc
+	class _OgreExport OverlayElementFactory : public OverlayAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(OverlayElementFactory);
+		
         /** Destroy the overlay element factory */
         virtual ~OverlayElementFactory () {}
         /** Creates a new OverlayElement instance with the name supplied. */
@@ -72,6 +74,8 @@ namespace Ogre {
     class _OgreExport PanelOverlayElementFactory: public OverlayElementFactory
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(PanelOverlayElementFactory);
+		
         /** See OverlayElementFactory */
         OverlayElement* createOverlayElement(const String& instanceName)
         {
@@ -89,6 +93,8 @@ namespace Ogre {
     class _OgreExport BorderPanelOverlayElementFactory: public OverlayElementFactory
     {
     public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(BorderPanelOverlayElementFactory);
+		 
         /** See OverlayElementFactory */
         OverlayElement* createOverlayElement(const String& instanceName)
         {
@@ -106,6 +112,8 @@ namespace Ogre {
     class _OgreExport TextAreaOverlayElementFactory: public OverlayElementFactory
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(TextAreaOverlayElementFactory);
+		
         /** See OverlayElementFactory */
         OverlayElement* createOverlayElement(const String& instanceName)
         {

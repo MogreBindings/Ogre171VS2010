@@ -45,6 +45,8 @@ namespace Ogre {
     /** Level of detail strategy based on distance from camera. */
     class _OgreExport DistanceLodStrategy : public LodStrategy, public Singleton<DistanceLodStrategy>
     {
+	public:
+      DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(DistanceLodStrategy);
     protected:
         /// @copydoc LodStrategy::getValueImpl
         virtual Real getValueImpl(const MovableObject *movableObject, const Camera *camera) const;

@@ -62,6 +62,9 @@ namespace Ogre {
     {
         friend class RenderSystem;
     public:
+		// DECLARE_CLRHANDLE has been moved last because TextureUnitState uses memcpy to copy its members
+      	// at the copy assignment operator and we don't want the CLRHandle to get copied..
+
         /** Definition of the broad types of texture effect you can apply to a texture unit.
         @note
             Note that these have no effect when using the programmable pipeline, since their
@@ -1175,6 +1178,11 @@ protected:
 		///The data that references the compositor
 		String mCompositorRefName;
 		String mCompositorRefTexName;
+		
+		public:
+			DECLARE_CLRHANDLE;
+			
+		protected:
         //-----------------------------------------------------------------------------
 
         //-----------------------------------------------------------------------------

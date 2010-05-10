@@ -315,6 +315,9 @@ settings have been made.
 #include "OgreStdHeaders.h"
 #include "OgreMemoryAllocatorConfig.h"
 
+#include "CLRObject.h"
+#include "CLRHandle.h"
+
 
 namespace Ogre
 {
@@ -437,9 +440,9 @@ namespace Ogre
 	#endif
 
 	#if OGRE_WCHAR_T_STRINGS
-		typedef std::basic_stringstream<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t> > _StringStreamBase;
+		typedef std::wstringstream _StringStreamBase;
 	#else
-		typedef std::basic_stringstream<char,std::char_traits<char>,std::allocator<char> > _StringStreamBase;
+		typedef std::stringstream _StringStreamBase;
 	#endif
 
 #endif

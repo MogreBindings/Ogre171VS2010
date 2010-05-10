@@ -80,6 +80,8 @@ namespace Ogre {
 	class _OgreExport Pass : public PassAlloc
     {
 	public:
+		DECLARE_CLRHANDLE;
+		
 		/** Definition of a functor for calculating the hashcode of a Pass.
 		@remarks
 			The hashcode of a Pass is used to sort Passes for rendering, in order

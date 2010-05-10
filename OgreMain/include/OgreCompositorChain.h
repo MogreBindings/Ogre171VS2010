@@ -43,9 +43,11 @@ namespace Ogre {
 	*/
 	/** Chain of compositor effects applying to one viewport.
      */
-    class _OgreExport CompositorChain: public RenderTargetListener, public CompositorInstAlloc
+    class _OgreExport CompositorChain: public RenderTargetListener, public CompositorInstAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(CompositorChain);
+	
         CompositorChain(Viewport *vp);
         /** Another gcc warning here, which is no problem because RenderTargetListener is never used
             to delete an object.

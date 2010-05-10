@@ -69,6 +69,8 @@ namespace Ogre {
     class _OgreExport MeshSerializer : public Serializer
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(MeshSerializer);
+		
         MeshSerializer();
         virtual ~MeshSerializer();
 

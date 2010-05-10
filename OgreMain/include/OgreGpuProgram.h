@@ -68,6 +68,9 @@ namespace Ogre {
 	*/
 	class _OgreExport GpuProgram : public Resource
 	{
+	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(GpuProgram);
+		
 	protected:
 		/// Command object - see ParamCommand 
 		class _OgreExport CmdType : public ParamCommand

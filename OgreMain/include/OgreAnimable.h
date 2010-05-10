@@ -68,9 +68,11 @@ namespace Ogre {
 		are often comprised of multiple properties it helps to be able to deal
 		with all values through a single class.
 	*/
-	class _OgreExport AnimableValue : public AnimableAlloc
+	class _OgreExport AnimableValue : public AnimableAlloc, public CLRObject
 	{
 	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(AnimableValue);
+		 
 		/// The type of the value being animated
 		enum ValueType
 		{

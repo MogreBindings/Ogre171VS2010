@@ -101,6 +101,8 @@ namespace Ogre {
     class _OgreExport Texture : public Resource
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Texture);
+		
         Texture(ResourceManager* creator, const String& name, ResourceHandle handle,
             const String& group, bool isManual = false, ManualResourceLoader* loader = 0);
 

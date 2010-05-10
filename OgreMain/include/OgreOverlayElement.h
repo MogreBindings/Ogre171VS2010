@@ -106,9 +106,10 @@ namespace Ogre {
     Because this class is designed to be extensible, it subclasses from StringInterface
     so its parameters can be set in a generic way.
     */
-    class _OgreExport OverlayElement : public StringInterface, public Renderable, public OverlayAlloc
+    class _OgreExport OverlayElement : public StringInterface, public Renderable, public OverlayAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(OverlayElement);
 
     protected:
         // Command object for setting / getting parameters

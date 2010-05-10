@@ -106,6 +106,8 @@ namespace Ogre
 	class _OgreExport ManualObject : public MovableObject
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ManualObject);
+		
 		ManualObject(const String& name);
 		virtual ~ManualObject();
 
@@ -393,8 +395,11 @@ namespace Ogre
 
 
 		/// Built, renderable section of geometry
-		class _OgreExport ManualObjectSection : public Renderable, public MovableAlloc
+		class _OgreExport ManualObjectSection : public Renderable, public MovableAlloc, public CLRObject
 		{
+		public:
+			DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ManualObject_ManualObjectSection);
+			
 		protected:
 			ManualObject* mParent;
 			String mMaterialName;
@@ -440,6 +445,9 @@ namespace Ogre
 		/** Nested class to allow shadows. */
 		class _OgreExport ManualObjectSectionShadowRenderable : public ShadowRenderable
 		{
+		public:
+			DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ManualObject_ManualObjectSectionShadowRenderable);
+			
 		protected:
 			ManualObject* mParent;
 			// Shared link to position buffer
@@ -541,6 +549,9 @@ namespace Ogre
 	/** Factory object for creating ManualObject instances */
 	class _OgreExport ManualObjectFactory : public MovableObjectFactory
 	{
+	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ManualObjectFactory);
+		 
 	protected:
 		MovableObject* createInstanceImpl( const String& name, const NameValuePairList* params);
 	public:

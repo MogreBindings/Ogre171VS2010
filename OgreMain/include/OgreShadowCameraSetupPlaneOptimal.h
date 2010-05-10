@@ -60,6 +60,9 @@ namespace Ogre {
     */
 	class _OgreExport PlaneOptimalShadowCameraSetup : public ShadowCameraSetup
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(PlaneOptimalShadowCameraSetup);
+		
 	private:
 		MovablePlane* m_plane;	///< pointer to plane of interest
 	private:

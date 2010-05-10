@@ -50,8 +50,10 @@ namespace Ogre {
         getIndex, sort, and isSorted.
         In addition, transformUserValue may be overridden.
     */
-	class _OgreExport LodStrategy : public LodAlloc
+	class _OgreExport LodStrategy : public LodAlloc, public CLRObject
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(LodStrategy);
     protected:
         /** Name of this strategy. */
         String mName;

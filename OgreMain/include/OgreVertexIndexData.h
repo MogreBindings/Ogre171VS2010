@@ -47,6 +47,9 @@ namespace Ogre {
 	/** Summary class collecting together vertex source information. */
 	class _OgreExport VertexData : public VertexDataAlloc
 	{
+	public:
+		 DECLARE_CLRHANDLE;
+		 
     private:
         /// Protected copy constructor, to prevent misuse
         VertexData(const VertexData& rhs); /* do nothing, should not use */
@@ -238,6 +241,9 @@ namespace Ogre {
 	/** Summary class collecting together index data source information. */
 	class _OgreExport IndexData : public IndexDataAlloc
 	{
+	public:
+		DECLARE_CLRHANDLE;
+		
     protected:
         /// Protected copy constructor, to prevent misuse
         IndexData(const IndexData& rhs); /* do nothing, should not use */

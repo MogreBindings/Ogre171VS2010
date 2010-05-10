@@ -385,6 +385,9 @@ namespace Ogre {
 	/** Factory object for creating ParticleSystem instances */
 	class _OgreExport ParticleSystemFactory : public MovableObjectFactory
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ParticleSystemFactory);
+		
 	protected:
 		MovableObject* createInstanceImpl(const String& name, const NameValuePairList* params);
 	public:

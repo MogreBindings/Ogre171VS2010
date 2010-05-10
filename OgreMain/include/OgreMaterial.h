@@ -87,6 +87,9 @@ namespace Ogre {
     */
     class _OgreExport Material : public Resource
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Material);
+		
         friend class SceneManager;
         friend class MaterialManager;
 

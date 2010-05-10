@@ -77,7 +77,8 @@ namespace Ogre {
 	{
 
 	public:
-
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(BillboardChain);
+		
 		/** Contains the data of an element of the BillboardChain.
 		*/
 		class _OgreExport Element
@@ -333,6 +334,9 @@ namespace Ogre {
 	/** Factory object for creating BillboardChain instances */
 	class _OgreExport BillboardChainFactory : public MovableObjectFactory
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(BillboardChainFactory);
+		
 	protected:
 		MovableObject* createInstanceImpl( const String& name, const NameValuePairList* params);
 	public:

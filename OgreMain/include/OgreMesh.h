@@ -90,6 +90,9 @@ namespace Ogre {
 
     class _OgreExport Mesh: public Resource
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Mesh);
+		
         friend class SubMesh;
         friend class MeshSerializerImpl;
         friend class MeshSerializerImpl_v1_4;

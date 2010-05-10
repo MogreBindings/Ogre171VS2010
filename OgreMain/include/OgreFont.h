@@ -66,6 +66,9 @@ namespace Ogre
     */
 	class _OgreExport Font : public Resource, public ManualResourceLoader
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Font);
+		
     protected:
 		/// Command object for Font - see ParamCommand 
 		class _OgreExport CmdType : public ParamCommand

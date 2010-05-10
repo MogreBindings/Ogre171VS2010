@@ -45,6 +45,9 @@ namespace Ogre {
 	/// Factory for default scene manager
 	class _OgreExport DefaultSceneManagerFactory : public SceneManagerFactory
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(DefaultSceneManagerFactory);
+		
 	protected:
 		void initMetaData(void) const;
 	public:

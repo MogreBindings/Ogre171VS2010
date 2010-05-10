@@ -70,10 +70,12 @@ namespace Ogre {
 		You should look for the 'useShadowBuffer' parameter on the creation methods used to create
 		the buffer of the type you require (see HardwareBufferManager) to enable this feature.
     */
-	class _OgreExport HardwareBuffer : public BufferAlloc
+	class _OgreExport HardwareBuffer : public BufferAlloc, public CLRObject
     {
 
 	    public:
+			 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(HardwareBuffer);
+		
 		    /// Enums describing buffer usage; not mutually exclusive
 		    enum Usage 
 		    {

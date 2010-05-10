@@ -84,8 +84,11 @@ namespace Ogre {
         to benefit from OGRE's automatic searching of multiple file locations 
         for the resources you are looking for.
     */
-	class _OgreExport Archive : public ArchiveAlloc
+	class _OgreExport Archive : public ArchiveAlloc, public CLRObject
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Archive);
+		
     protected:
         /// Archive name
         String mName; 
@@ -94,8 +97,6 @@ namespace Ogre {
 		/// Read-only flag
 		bool mReadOnly;
     public:
-
-
         /** Constructor - don't call direct, used by ArchiveFactory.
         */
         Archive( const String& name, const String& archType )

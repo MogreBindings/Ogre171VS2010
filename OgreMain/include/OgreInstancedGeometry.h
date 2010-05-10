@@ -101,9 +101,11 @@ namespace Ogre {
     @note
 		Warning: this class only works with indexed triangle lists at the moment,		do not pass it triangle strips, fans or lines / points, or unindexed geometry.
 	*/
-	class _OgreExport  InstancedGeometry : public BatchedGeometryAlloc
+	class _OgreExport  InstancedGeometry : public BatchedGeometryAlloc, public CLRObject
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(InstancedGeometry);
+		
 		/** Struct holding geometry optimised per SubMesh / lod level, ready
 			for copying to instances. 
 		@remarks
@@ -252,6 +254,9 @@ namespace Ogre {
 		};
 		class _OgreExport  InstancedObject : public BatchedGeometryAlloc
 		{
+			public:
+				 DECLARE_CLRHANDLE;
+				 
 			friend class GeometryBucket;
 		public:
 			 enum TransformSpace

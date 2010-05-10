@@ -48,6 +48,8 @@ namespace Ogre
     class _OgreExport RenderTexture: public RenderTarget
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderTexture);
+		
         RenderTexture(HardwarePixelBuffer *buffer, size_t zoffset);
         virtual ~RenderTexture();
 
@@ -69,6 +71,8 @@ namespace Ogre
 	class _OgreExport MultiRenderTarget: public RenderTarget
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(MultiRenderTarget);
+		
 		MultiRenderTarget(const String &name);
 
 		/** Bind a surface to a certain attachment point.

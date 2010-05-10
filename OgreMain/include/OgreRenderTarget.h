@@ -61,9 +61,11 @@ namespace Ogre {
         @version
             1.0
      */
-    class _OgreExport RenderTarget : public RenderSysAlloc
+    class _OgreExport RenderTarget : public RenderSysAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderTarget);
+		
         enum StatFlags
         {
             SF_NONE           = 0,

@@ -136,9 +136,11 @@ namespace Ogre {
 		dependent on the Camera, which will always call back the SceneManager
 		which created it to render the scene. 
      */
-	class _OgreExport SceneManager : public SceneMgtAlloc
+	class _OgreExport SceneManager : public SceneMgtAlloc, public CLRObject
     {
     public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SceneManager);
+		 
         /// Query type mask which will be used for world geometry @see SceneQuery
         static uint32 WORLD_GEOMETRY_TYPE_MASK;
 		/// Query type mask which will be used for entities @see SceneQuery
@@ -3465,8 +3467,11 @@ namespace Ogre {
 
 
 	/** Class which will create instances of a given SceneManager. */
-	class _OgreExport SceneManagerFactory : public SceneMgtAlloc
+	class _OgreExport SceneManagerFactory : public SceneMgtAlloc, public CLRObject
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SceneManagerFactory);
+		
 	protected:
 		mutable SceneManagerMetaData mMetaData;
 		mutable bool mMetaDataInit;

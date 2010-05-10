@@ -386,6 +386,9 @@ namespace Ogre {
 	*/
 	class _OgreExport GpuSharedParameters : public GpuParamsAlloc
 	{
+	public:
+		DECLARE_CLRHANDLE;
+	
 	protected:
 		GpuNamedConstants mNamedConstants;
 		FloatConstantList mFloatConstants;
@@ -500,6 +503,9 @@ namespace Ogre {
 	*/
 	class _OgreExport GpuSharedParametersUsage : public GpuParamsAlloc
 	{
+	public:
+		DECLARE_CLRHANDLE;
+		
 	protected:
 		GpuSharedParametersPtr mSharedParams;
 		// Not a shared pointer since this is also parent
@@ -584,6 +590,8 @@ namespace Ogre {
 	class _OgreExport GpuProgramParameters : public GpuParamsAlloc
 	{
 	public:
+		DECLARE_CLRHANDLE;
+	
 		/** Defines the types of automatically updated values that may be bound to GpuProgram
 		parameters, or used to modify parameters on a per-object basis.
 		*/

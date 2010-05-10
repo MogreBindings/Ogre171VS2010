@@ -43,6 +43,8 @@ namespace Ogre {
 	/** 'New' rendering operation using vertex buffers. */
 	class _OgrePrivate RenderOperation {
 	public:
+		DECLARE_CLRHANDLE;
+		 
 		/// The rendering operation type to perform
 		enum OperationType {
 			/// A list of points, 1 vertex per point

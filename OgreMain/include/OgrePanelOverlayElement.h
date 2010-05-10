@@ -58,6 +58,8 @@ namespace Ogre {
     class _OgreExport PanelOverlayElement : public OverlayContainer
     {
     public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(PanelOverlayElement);
+		 
         /** Constructor. */
         PanelOverlayElement(const String& name);
         virtual ~PanelOverlayElement();

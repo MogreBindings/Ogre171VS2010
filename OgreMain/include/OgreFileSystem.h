@@ -46,6 +46,9 @@ namespace Ogre {
     */
     class _OgreExport FileSystemArchive : public Archive 
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(FileSystemArchive);
+		
     protected:
         /** Utility method to retrieve all files in a directory matching pattern.
         @param pattern File pattern

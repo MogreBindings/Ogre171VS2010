@@ -83,6 +83,9 @@ namespace Ogre
     */
     class _OgreExport Frustum : public MovableObject, public Renderable
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Frustum);
+		
     protected:
         /// Orthographic or perspective?
         ProjectionType mProjType;

@@ -56,6 +56,9 @@ namespace Ogre {
 	*/
 	class _OgreExport FocusedShadowCameraSetup : public ShadowCameraSetup
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(FocusedShadowCameraSetup);
+		
 	protected:
 		/** Transform to or from light space as defined by Wimmer et al.
 		@remarks

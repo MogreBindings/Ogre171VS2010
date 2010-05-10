@@ -72,6 +72,8 @@ namespace Ogre {
     class _OgreExport Light : public MovableObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Light);
+		
         /// Temp tag used for sorting
         Real tempSquareDist;
 		/// internal method for calculating current squared distance from some world position
@@ -565,6 +567,9 @@ namespace Ogre {
 	/** Factory object for creating Light instances */
 	class _OgreExport LightFactory : public MovableObjectFactory
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(LightFactory);
+		
 	protected:
 		MovableObject* createInstanceImpl( const String& name, const NameValuePairList* params);
 	public:

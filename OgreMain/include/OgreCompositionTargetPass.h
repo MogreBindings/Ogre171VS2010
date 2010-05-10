@@ -44,6 +44,8 @@ namespace Ogre {
 	class _OgreExport CompositionTargetPass : public CompositorInstAlloc
     {
     public:
+		DECLARE_CLRHANDLE;
+		
         CompositionTargetPass(CompositionTechnique *parent);
         ~CompositionTargetPass();
         

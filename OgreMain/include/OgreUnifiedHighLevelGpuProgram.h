@@ -60,6 +60,8 @@ namespace Ogre {
 	class _OgreExport UnifiedHighLevelGpuProgram : public HighLevelGpuProgram
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(UnifiedHighLevelGpuProgram);
+		
 		/// Command object for setting delegate (can set more than once)
 		class CmdDelegate : public ParamCommand
 		{

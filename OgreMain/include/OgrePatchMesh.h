@@ -46,6 +46,9 @@ namespace Ogre {
     */
     class _OgreExport PatchMesh : public Mesh
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(PatchMesh);
+		
     protected:
         /// Internal surface definition
         PatchSurface mSurface;

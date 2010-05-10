@@ -85,6 +85,8 @@ namespace Ogre {
     class _OgreExport Camera : public Frustum
     {
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Camera);
+		
 		/** Listener interface so you can be notified of Camera events. 
 		*/
 		class _OgreExport Listener 

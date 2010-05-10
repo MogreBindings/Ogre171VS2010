@@ -48,6 +48,9 @@ namespace Ogre
     */
     class _OgreExport TimeIndex
     {
+	public:
+	   DECLARE_CLRHANDLE;
+	   
     protected:
         /** The time position (in relation to the whole animation sequence)
         */
@@ -118,10 +121,11 @@ namespace Ogre
 		It is possible to change this behaviour using
 		setUseShortestRotationPath() method.
     */
-	class _OgreExport AnimationTrack : public AnimationAlloc
+	class _OgreExport AnimationTrack : public AnimationAlloc, public CLRObject
     {
     public:
-
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(AnimationTrack);
+		
 		/** Listener allowing you to override certain behaviour of a track, 
 			for example to drive animation procedurally.
 		*/
@@ -261,6 +265,7 @@ namespace Ogre
 	class _OgreExport NumericAnimationTrack : public AnimationTrack
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(NumericAnimationTrack);
 		/// Constructor
 		NumericAnimationTrack(Animation* parent, unsigned short handle);
 		/// Constructor, associates with an AnimableValue
@@ -322,6 +327,8 @@ namespace Ogre
 	class _OgreExport NodeAnimationTrack : public AnimationTrack
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(NodeAnimationTrack);
+		
 		/// Constructor
 		NodeAnimationTrack(Animation* parent, unsigned short handle);
 		/// Constructor, associates with a Node
@@ -474,6 +481,7 @@ namespace Ogre
 	class _OgreExport VertexAnimationTrack : public AnimationTrack
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(VertexAnimationTrack);
 		/** The target animation mode */
 		enum TargetMode
 		{

@@ -92,18 +92,6 @@ THE SOFTWARE.
 #  define OGRE_MEMORY_ALLOCATOR OGRE_MEMORY_ALLOCATOR_NEDPOOLING
 #endif
 
-// Whether to use the custom memory allocator in STL containers
-#ifndef OGRE_CONTAINERS_USE_CUSTOM_MEMORY_ALLOCATOR
-#  define OGRE_CONTAINERS_USE_CUSTOM_MEMORY_ALLOCATOR 1
-#endif
-
-//if you want to make Ogre::String use the custom memory allocator then set:
-//#define OGRE_STRING_USE_CUSTOM_MEMORY_ALLOCATOR 1
-// Doing this will mean Ogre's strings will not be compatible with std::string however
-#ifndef OGRE_STRING_USE_CUSTOM_MEMORY_ALLOCATOR
-#	define OGRE_STRING_USE_CUSTOM_MEMORY_ALLOCATOR 0
-#endif
-
 // enable or disable the memory tracker, recording the memory allocations & tracking leaks
 // default is to disable since it's expensive, but you can enable if needed per build target
 

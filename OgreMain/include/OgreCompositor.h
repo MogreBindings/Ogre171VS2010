@@ -49,6 +49,8 @@ namespace Ogre {
     class _OgreExport Compositor: public Resource
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Compositor);
+	
         Compositor(ResourceManager* creator, const String& name, ResourceHandle handle,
             const String& group, bool isManual = false, ManualResourceLoader* loader = 0);
         ~Compositor();

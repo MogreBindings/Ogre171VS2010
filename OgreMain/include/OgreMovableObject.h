@@ -59,6 +59,8 @@ namespace Ogre {
     class _OgreExport MovableObject : public ShadowCaster, public AnimableObject, public MovableAlloc
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(MovableObject);
+		
         /** Listener which gets called back on MovableObject events.
         */
         class _OgreExport Listener
@@ -556,8 +558,11 @@ namespace Ogre {
 		to allow all clients to produce new instances of this object, integrated
 		with the standard Ogre processing.
 	*/
-	class _OgreExport MovableObjectFactory : public MovableAlloc
+	class _OgreExport MovableObjectFactory : public MovableAlloc, public CLRObject
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(MovableObjectFactory);
+		
 	protected:
 		/// Type flag, allocated if requested
 		unsigned long mTypeFlag;

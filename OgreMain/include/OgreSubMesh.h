@@ -61,6 +61,9 @@ namespace Ogre {
     */
 	class _OgreExport SubMesh : public SubMeshAlloc
     {
+	public:
+		DECLARE_CLRHANDLE;
+		
         friend class Mesh;
         friend class MeshSerializerImpl;
         friend class MeshSerializerImpl_v1_2;
@@ -131,7 +134,8 @@ namespace Ogre {
                 If this array is empty, submesh sorting is done like in older versions -
                 by comparing the positions of the owning entity.
          */
-        vector<Vector3>::type extremityPoints;
+        typedef vector<Vector3>::type PointList;
+        PointList extremityPoints;
 
         /// Reference to parent Mesh (not a smart pointer so child does not keep parent alive).
         Mesh* parent;

@@ -62,6 +62,9 @@ namespace Ogre {
     */
     class _OgreExport HighLevelGpuProgram : public GpuProgram
     {
+	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(HighLevelGpuProgram);
+		 
     protected:
         /// Whether the high-level program (and it's parameter defs) is loaded
         bool mHighLevelLoaded;

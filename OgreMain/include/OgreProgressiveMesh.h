@@ -61,10 +61,11 @@ namespace Ogre {
         NB the interface of this class will certainly change when compiled vertex buffers are
         supported.
     */
-	class _OgreExport ProgressiveMesh : public ProgMeshAlloc
+	class _OgreExport ProgressiveMesh : public ProgMeshAlloc, public CLRObject
     {
     public:
-
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ProgressiveMesh);
+		
 		/** The way to derive the quota of vertices which are reduced at each LOD. */
         enum VertexReductionQuota
 		{

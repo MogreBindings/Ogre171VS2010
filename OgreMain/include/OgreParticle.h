@@ -59,6 +59,9 @@ namespace Ogre {
 	/** Class representing a single particle instance. */
 	class _OgreExport Particle : public FXAlloc
     {
+	public:
+		DECLARE_CLRHANDLE;
+		
     protected:
         /// Parent ParticleSystem
         ParticleSystem* mParentSystem;

@@ -48,12 +48,13 @@ namespace Ogre {
   * @author Lee Sandberg
   * Updated on 13/8/2005 by Tuan Kuranes email: tuan.kuranes@free.fr
   */
-	class _OgreExport HardwareOcclusionQuery : public RenderSysAlloc
+	class _OgreExport HardwareOcclusionQuery : public RenderSysAlloc, public CLRObject
 {
 //----------------------------------------------------------------------
 // Public methods
 //--
 public:
+	DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(HardwareOcclusionQuery);
 	/**
 	  * Object public member functions
 	  */

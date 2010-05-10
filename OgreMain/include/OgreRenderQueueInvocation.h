@@ -63,8 +63,11 @@ namespace Ogre {
 		them being rendered - for example special-case render queues and
 		render queue listeners that dictate this.
 	*/
-	class _OgreExport RenderQueueInvocation : public RenderQueueAlloc
+	class _OgreExport RenderQueueInvocation : public RenderQueueAlloc, public CLRObject
 	{
+	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderQueueInvocation);
+		 
 	protected:
 		/// Target queue group
 		uint8 mRenderQueueGroupID;
@@ -170,8 +173,11 @@ namespace Ogre {
 		that any invocation instances you give to this class will be deleted
 		by it when it is cleared / destroyed.
 	*/
-	class _OgreExport RenderQueueInvocationSequence : public RenderQueueAlloc
+	class _OgreExport RenderQueueInvocationSequence : public RenderQueueAlloc, public CLRObject
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderQueueInvocationSequence);
+		
 	protected:
 		String mName;
 		RenderQueueInvocationList mInvocations;

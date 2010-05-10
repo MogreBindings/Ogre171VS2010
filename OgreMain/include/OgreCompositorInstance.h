@@ -46,9 +46,11 @@ namespace Ogre {
     /** An instance of a Compositor object for one Viewport. It is part of the CompositorChain
 		for a Viewport.
      */
-	class _OgreExport CompositorInstance : public CompositorInstAlloc
+	class _OgreExport CompositorInstance : public CompositorInstAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(CompositorInstance);
+	
         CompositorInstance(CompositionTechnique *technique, CompositorChain *chain);
         virtual ~CompositorInstance();
 		/** Provides an interface to "listen in" to to render system operations executed by this 

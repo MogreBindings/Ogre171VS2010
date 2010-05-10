@@ -56,6 +56,8 @@ namespace Ogre {
     class _OgreExport SkeletonSerializer : public Serializer
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SkeletonSerializer);
+		
         SkeletonSerializer();
         virtual ~SkeletonSerializer();
 

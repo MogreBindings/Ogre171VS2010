@@ -108,6 +108,9 @@ namespace Ogre {
     */
     class _OgreExport BillboardSet : public MovableObject, public Renderable
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(BillboardSet);
+		
     protected:
         /** Private constructor (instances cannot be created directly).
         */
@@ -851,6 +854,9 @@ namespace Ogre {
 	/** Factory object for creating BillboardSet instances */
 	class _OgreExport BillboardSetFactory : public MovableObjectFactory
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(BillboardSetFactory);
+	
 	protected:
 		MovableObject* createInstanceImpl( const String& name, const NameValuePairList* params);
 	public:

@@ -48,6 +48,9 @@ namespace Ogre {
 	*/
 	class _OgreExport SimpleRenderable : public MovableObject, public Renderable
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SimpleRenderable);
+		
     protected:
         RenderOperation mRenderOp;
 

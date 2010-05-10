@@ -117,9 +117,11 @@ namespace Ogre {
 		Warning: this class only works with indexed triangle lists at the moment,
 		do not pass it triangle strips, fans or lines / points, or unindexed geometry.
 	*/
-	class _OgreExport StaticGeometry : public BatchedGeometryAlloc
+	class _OgreExport StaticGeometry : public BatchedGeometryAlloc, public CLRObject
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(StaticGeometry);
+		
 		/** Struct holding geometry optimised per SubMesh / lod level, ready
 			for copying to instances. 
 		@remarks
@@ -254,6 +256,8 @@ namespace Ogre {
 		class _OgreExport MaterialBucket : public BatchedGeometryAlloc
 		{
 		public:
+			DECLARE_CLRHANDLE;
+			
 			/// list of Geometry Buckets in this region
 			typedef vector<GeometryBucket*>::type GeometryBucketList;
 		protected:
@@ -307,6 +311,8 @@ namespace Ogre {
 		class _OgreExport LODBucket : public BatchedGeometryAlloc
 		{
 		public:
+			DECLARE_CLRHANDLE;
+			
 			/// Lookup of Material Buckets in this region
 			typedef map<String, MaterialBucket*>::type MaterialBucketMap;
 		protected:
@@ -388,9 +394,11 @@ namespace Ogre {
 		*/
 		class _OgreExport Region : public MovableObject
 		{
+		public:
+			DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(StaticGeometry_Region);
+			
             friend class MaterialBucket;
             friend class GeometryBucket;
-		public:
 			/// list of LOD Buckets in this region
 			typedef vector<LODBucket*>::type LODBucketList;
 		protected:

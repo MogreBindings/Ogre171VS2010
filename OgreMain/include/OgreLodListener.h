@@ -114,10 +114,12 @@ namespace Ogre {
             also be called.  The postqueue method is invoked at an appropriate
             time after rendering and scene changes may be safely made there.
     */
-    class _OgreExport LodListener
+    class _OgreExport LodListener : public CLRObject
     {
     public:
-
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(LodListener);
+	
+	public:
         virtual ~LodListener() {}
 
         /**

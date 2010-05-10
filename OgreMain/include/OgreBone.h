@@ -51,6 +51,8 @@ namespace Ogre
     class _OgreExport Bone : public Node
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Bone);
+		
         /** Constructor, not to be used directly (use Bone::createChild or Skeleton::createBone) */
         Bone(unsigned short handle, Skeleton* creator);
         /** Constructor, not to be used directly (use Bone::createChild or Skeleton::createBone) */

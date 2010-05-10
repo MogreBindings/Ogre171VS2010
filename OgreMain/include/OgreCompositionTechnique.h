@@ -41,9 +41,11 @@ namespace Ogre {
 	*/
 	/** Base composition technique, can be subclassed in plugins.
      */
-	class _OgreExport CompositionTechnique : public CompositorInstAlloc
+	class _OgreExport CompositionTechnique : public CompositorInstAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(CompositionTechnique);
+	
         CompositionTechnique(Compositor *parent);
         virtual ~CompositionTechnique();
     

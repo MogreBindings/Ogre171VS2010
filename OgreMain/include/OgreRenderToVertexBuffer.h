@@ -48,9 +48,11 @@ namespace Ogre {
         that run on previous results of those shaders, creating stateful 
         shaders.
     */
-    class _OgreExport RenderToVertexBuffer
+    class _OgreExport RenderToVertexBuffer : public CLRObject
     {    
     public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderToVertexBuffer);
+		 
 		/** C'tor */
 		RenderToVertexBuffer();
 		/** D'tor */

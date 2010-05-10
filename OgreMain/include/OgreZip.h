@@ -53,6 +53,9 @@ namespace Ogre {
     */
     class _OgreExport ZipArchive : public Archive 
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ZipArchive);
+		
     protected:
         /// Handle to root zip file
         ZZIP_DIR* mZzipDir;

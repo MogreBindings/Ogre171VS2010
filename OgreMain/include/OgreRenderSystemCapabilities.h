@@ -235,7 +235,8 @@ namespace Ogre
 	{
 
 	public:
-
+		DECLARE_CLRHANDLE;
+		
 		typedef set<String>::type ShaderProfiles;
 	private:
 		/// This is used to build a database of RSC's

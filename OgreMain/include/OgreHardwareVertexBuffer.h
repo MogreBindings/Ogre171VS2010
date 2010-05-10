@@ -46,6 +46,9 @@ namespace Ogre {
 	/** Specialisation of HardwareBuffer for a vertex buffer. */
     class _OgreExport HardwareVertexBuffer : public HardwareBuffer
     {
+		public:
+			DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(HardwareVertexBuffer);
+			
 	    protected:
 
 			HardwareBufferManagerBase* mMgr;
@@ -302,9 +305,11 @@ namespace Ogre {
 	Like the other classes in this functional area, these declarations should be created and
 	destroyed using the HardwareBufferManager.
     */
-	class _OgreExport VertexDeclaration : public VertexDataAlloc
+	class _OgreExport VertexDeclaration : public VertexDataAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(VertexDeclaration);
+		
 		/// Defines the list of vertex elements that makes up this declaration
         typedef list<VertexElement>::type VertexElementList;
         /// Sort routine for vertex elements
@@ -480,9 +485,11 @@ namespace Ogre {
 		Like the other classes in this functional area, these binding maps should be created and
 		destroyed using the HardwareBufferManager.
 	*/
-	class _OgreExport VertexBufferBinding : public VertexDataAlloc
+	class _OgreExport VertexBufferBinding : public VertexDataAlloc, public CLRObject
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(VertexBufferBinding);
+		
 		/// Defines the vertex buffer bindings used as source for vertex declarations
 		typedef map<unsigned short, HardwareVertexBufferSharedPtr>::type VertexBufferBindingMap;
 	protected:

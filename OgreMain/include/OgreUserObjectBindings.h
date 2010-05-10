@@ -45,9 +45,11 @@ namespace Ogre {
 	Any instance of Ogre class that will derive from this class could be associated with custom 
 	application object using this class interface.
 	*/
-	class _OgreExport UserObjectBindings : public GeneralAllocatedObject
+	class _OgreExport UserObjectBindings : public GeneralAllocatedObject, public CLRObject
 	{
 	public:	
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(UserObjectBindings);
+		
 		/** Class constructor. */
 		UserObjectBindings();
 

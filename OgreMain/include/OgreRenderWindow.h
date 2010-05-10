@@ -63,6 +63,8 @@ namespace Ogre
     {
 
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RenderWindow);
+		
         /** Default constructor.
         */
         RenderWindow();

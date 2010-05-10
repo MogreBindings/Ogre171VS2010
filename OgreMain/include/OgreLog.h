@@ -91,6 +91,9 @@ namespace Ogre {
     */
 	class _OgreExport Log : public LogAlloc
     {
+	public:
+		 DECLARE_CLRHANDLE;
+		 
     protected:
         std::ofstream	mfpLog;
         LoggingLevel	mLogLevel;
@@ -190,6 +193,9 @@ namespace Ogre {
 		*/
 		class Stream
 		{
+		public:
+			 DECLARE_CLRHANDLE;
+			 
 		protected:
 			Log* mTarget;
 			LogMessageLevel mLevel;

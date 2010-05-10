@@ -80,6 +80,9 @@ namespace Ogre {
 	*/
 	class _OgreExport Entity: public MovableObject, public Resource::Listener
 	{
+	public:
+        DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Entity);
+	
 		// Allow EntityFactory full access
 		friend class EntityFactory;
 		friend class SubEntity;
@@ -785,6 +788,9 @@ namespace Ogre {
 	/** Factory object for creating Entity instances */
 	class _OgreExport EntityFactory : public MovableObjectFactory
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(EntityFactory);
+		
 	protected:
 		MovableObject* createInstanceImpl( const String& name, const NameValuePairList* params);
 	public:

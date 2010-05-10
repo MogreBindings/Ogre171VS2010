@@ -50,6 +50,9 @@ namespace Ogre {
     */
     class _OgreExport BillboardParticleRenderer : public ParticleSystemRenderer
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(BillboardParticleRenderer);
+		
     protected:
         /// The billboard set that's doing the rendering
         BillboardSet* mBillboardSet;

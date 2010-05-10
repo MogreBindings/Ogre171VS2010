@@ -52,6 +52,8 @@ namespace Ogre {
     class _OgreExport SkeletonInstance : public Skeleton
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SkeletonInstance);
+		
         /** Constructor, don't call directly, this will be created automatically
         when you create an Entity based on a skeletally animated Mesh.
         */

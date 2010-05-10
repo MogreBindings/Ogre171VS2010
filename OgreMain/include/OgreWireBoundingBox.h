@@ -47,6 +47,9 @@ namespace Ogre {
     */
 	class _OgreExport WireBoundingBox : public SimpleRenderable
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(WireBoundingBox);
+		
     protected:
         /** Override this method to prevent parent transforms (rotation,translation,scale)
         */

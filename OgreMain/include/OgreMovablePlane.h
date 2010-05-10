@@ -52,6 +52,9 @@ namespace Ogre {
     */
     class _OgreExport MovablePlane : public Plane, public MovableObject
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(MovablePlane);
+		
     protected:
         mutable Plane mDerivedPlane;
         mutable Vector3 mLastTranslate;

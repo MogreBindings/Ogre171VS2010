@@ -97,6 +97,9 @@ namespace Ogre
 	*/
 	class _OgreExport LiSPSMShadowCameraSetup : public FocusedShadowCameraSetup
 	{
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(LiSPSMShadowCameraSetup);
+		
 	protected:
 		/// Warp factor adjustment
 		Real mOptAdjustFactor;

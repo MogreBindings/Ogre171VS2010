@@ -70,9 +70,11 @@ namespace Ogre
 	before calling create defined texture... or it will fail, though, it 
 	is up to the plugin to report errors to the log file, or raise an 
 	exception if need be. */
-	class _OgreExport ExternalTextureSource : public StringInterface
+	class _OgreExport ExternalTextureSource : public StringInterface, public CLRObject
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ExternalTextureSource);
+	
 		/** Constructor */
 		ExternalTextureSource();
 		/** Virtual destructor */

@@ -52,9 +52,10 @@ namespace Ogre
         animation sequence, with the exact state of the animation being an 
         interpolation between these key frames. 
     */
-	class _OgreExport KeyFrame : public AnimationAlloc
+	class _OgreExport KeyFrame : public AnimationAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(KeyFrame);
 
         /** Default constructor, you should not call this but use AnimationTrack::createKeyFrame instead. */
         KeyFrame(const AnimationTrack* parent, Real time);
@@ -79,6 +80,8 @@ namespace Ogre
 	class _OgreExport NumericKeyFrame : public KeyFrame
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(NumericKeyFrame);
+		
 		/** Default constructor, you should not call this but use AnimationTrack::createKeyFrame instead. */
 		NumericKeyFrame(const AnimationTrack* parent, Real time);
 		~NumericKeyFrame() {}
@@ -102,6 +105,8 @@ namespace Ogre
 	class _OgreExport TransformKeyFrame : public KeyFrame
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(TransformKeyFrame);
+		
 		/** Default constructor, you should not call this but use AnimationTrack::createKeyFrame instead. */
 		TransformKeyFrame(const AnimationTrack* parent, Real time);
 		~TransformKeyFrame() {}
@@ -153,6 +158,8 @@ namespace Ogre
 	class _OgreExport VertexMorphKeyFrame : public KeyFrame
 	{
 	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(VertexMorphKeyFrame);
+		 
 		/** Default constructor, you should not call this but use AnimationTrack::createKeyFrame instead. */
 		VertexMorphKeyFrame(const AnimationTrack* parent, Real time);
 		~VertexMorphKeyFrame() {}
@@ -183,6 +190,8 @@ namespace Ogre
 	class _OgreExport VertexPoseKeyFrame : public KeyFrame
 	{
 	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(VertexPoseKeyFrame);
+		 
 		/** Default constructor, you should not call this but use AnimationTrack::createKeyFrame instead. */
 		VertexPoseKeyFrame(const AnimationTrack* parent, Real time);
 		~VertexPoseKeyFrame() {}

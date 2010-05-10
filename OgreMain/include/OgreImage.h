@@ -61,6 +61,8 @@ namespace Ogre {
 	class _OgreExport Image : public ImageAlloc
     {
     public:
+		DECLARE_CLRHANDLE;
+		 
     	typedef Ogre::Box Box;
     	typedef Ogre::Rect Rect;
     public:

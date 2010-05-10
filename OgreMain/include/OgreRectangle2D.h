@@ -48,6 +48,9 @@ namespace Ogre {
     */
     class _OgreExport Rectangle2D : public SimpleRenderable
     {
+	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Rectangle2D);
+		 
     protected:
         /** Override this method to prevent parent transforms (rotation,translation,scale)
         */

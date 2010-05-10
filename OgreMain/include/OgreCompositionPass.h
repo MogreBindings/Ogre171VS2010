@@ -46,6 +46,8 @@ namespace Ogre {
 	class _OgreExport CompositionPass : public CompositorInstAlloc
     {
     public:
+		DECLARE_CLRHANDLE;
+		
         CompositionPass(CompositionTargetPass *parent);
         ~CompositionPass();
         
@@ -222,6 +224,8 @@ namespace Ogre {
 		/// Inputs (for material used for rendering the quad)
 		struct InputTex
 		{
+			DECLARE_CLRHANDLE;
+			
 			/// Name (local) of the input texture (empty == no input)
 			String name;
 			/// MRT surface index if applicable

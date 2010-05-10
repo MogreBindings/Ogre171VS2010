@@ -70,9 +70,11 @@ namespace Ogre {
         using the SceneManager interfaces for the type of query required, e.g.
         SceneManager::createSphereSceneQuery.
     */
-	class _OgreExport SceneQuery : public SceneMgtAlloc
+	class _OgreExport SceneQuery : public SceneMgtAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SceneQuery);
+		
         /** This type can be used by collaborating applications & SceneManagers to 
             agree on the type of world geometry to be returned from queries. Not all
             these types will be supported by all SceneManagers; once the application
@@ -222,6 +224,9 @@ namespace Ogre {
     class _OgreExport RegionSceneQuery
         : public SceneQuery, public SceneQueryListener
     {
+	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RegionSceneQuery);
+		 
     protected:
         SceneQueryResult* mLastResult;
     public:
@@ -268,6 +273,9 @@ namespace Ogre {
     /** Specialises the SceneQuery class for querying within an axis aligned box. */
     class _OgreExport AxisAlignedBoxSceneQuery : public RegionSceneQuery
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(AxisAlignedBoxSceneQuery);
+		
     protected:
         AxisAlignedBox mAABB;
     public:
@@ -285,6 +293,9 @@ namespace Ogre {
     /** Specialises the SceneQuery class for querying within a sphere. */
     class _OgreExport SphereSceneQuery : public RegionSceneQuery
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SphereSceneQuery);
+		
     protected:
         Sphere mSphere;
     public:
@@ -302,6 +313,9 @@ namespace Ogre {
     */
     class _OgreExport PlaneBoundedVolumeListSceneQuery : public RegionSceneQuery
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(PlaneBoundedVolumeListSceneQuery);
+		
     protected:
         PlaneBoundedVolumeList mVolumes;
     public:
@@ -374,6 +388,9 @@ namespace Ogre {
     /** Specialises the SceneQuery class for querying along a ray. */
     class _OgreExport RaySceneQuery : public SceneQuery, public RaySceneQueryListener
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(RaySceneQuery);
+		
     protected:
         Ray mRay;
         bool mSortByDistance;
@@ -511,6 +528,9 @@ namespace Ogre {
     class _OgreExport IntersectionSceneQuery
         : public SceneQuery, public IntersectionSceneQueryListener 
     {
+	public:
+		 DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(IntersectionSceneQuery);
+		 
     protected:
         IntersectionSceneQueryResult* mLastResult;
     public:

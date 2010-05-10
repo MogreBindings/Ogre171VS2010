@@ -46,6 +46,8 @@ namespace Ogre {
     class _OgreExport HardwareIndexBuffer : public HardwareBuffer
     {
 	    public:
+			DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(HardwareIndexBuffer);
+			
 		    enum IndexType {
 			    IT_16BIT,
 			    IT_32BIT

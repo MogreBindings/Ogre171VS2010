@@ -57,6 +57,8 @@ namespace Ogre {
 	class _OgreExport RotationalSpline
     {
     public:
+		DECLARE_CLRHANDLE;
+		
         RotationalSpline();
         ~RotationalSpline();
 

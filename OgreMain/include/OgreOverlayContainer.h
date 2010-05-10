@@ -56,6 +56,8 @@ namespace Ogre {
     class _OgreExport OverlayContainer : public OverlayElement
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(OverlayContainer);
+		
         typedef map<String, OverlayElement*>::type ChildMap;
         typedef MapIterator<ChildMap> ChildIterator;
         typedef map<String, OverlayContainer*>::type ChildContainerMap;

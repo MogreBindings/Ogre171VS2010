@@ -65,9 +65,11 @@ namespace Ogre {
 		degrees of freedom.  This class is meant to allow custom methods for 
 		handling optimization.
     */
-	class _OgreExport ShadowCameraSetup : public ShadowDataAlloc
+	class _OgreExport ShadowCameraSetup : public ShadowDataAlloc, public CLRObject
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(ShadowCameraSetup);
+		
 		/// Function to implement -- must set the shadow camera properties
 		virtual void getShadowCamera (const SceneManager *sm, const Camera *cam, 
 									  const Viewport *vp, const Light *light, Camera *texCam, size_t iteration) const = 0;
@@ -86,6 +88,8 @@ namespace Ogre {
 	class _OgreExport DefaultShadowCameraSetup : public ShadowCameraSetup
 	{
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(DefaultShadowCameraSetup);
+		
 		/// Default constructor
 		DefaultShadowCameraSetup();
 		/// Destructor

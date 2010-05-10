@@ -37,12 +37,28 @@ THE SOFTWARE.
 
 namespace Ogre {
 
+	  //Additions for Mogre
+    Exception LastExceptionThrown(-1, "", "");
+
+    Exception* Exception::getLastException(void) throw()
+	{
+		if (LastExceptionThrown.getNumber() == -1)
+		  return 0;
+		return &LastExceptionThrown;
+	}
+
+	void Exception::clearLastException() throw()
+	{
+		LastExceptionThrown = Exception(-1, "", "");
+    }
+
     Exception::Exception(int num, const String& desc, const String& src) :
         line( 0 ),
         number( num ),
         description( desc ),
         source( src )
     {
+		LastExceptionThrown = *this;
         // Log this error - not any more, allow catchers to do it
         //LogManager::getSingleton().logMessage(this->getFullDescription());
     }
@@ -56,6 +72,7 @@ namespace Ogre {
         source( src ),
         file( fil )
     {
+		 LastExceptionThrown = *this;
         // Log this error, mask it from debug though since it may be caught and ignored
         if(LogManager::getSingletonPtr())
 		{
@@ -108,9 +125,9 @@ namespace Ogre {
 		return fullDesc;
     }
 
-    int Exception::getNumber(void) const throw()
+    Exception::ExceptionCodes Exception::getNumber(void) const throw()
     {
-        return number;
+        return (Exception::ExceptionCodes)number;
     }
 
 }

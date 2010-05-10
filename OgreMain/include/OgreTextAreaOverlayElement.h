@@ -43,6 +43,8 @@ namespace Ogre
     class _OgreExport TextAreaOverlayElement : public OverlayElement
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(TextAreaOverlayElement);
+		
         enum Alignment
         {
             Left,

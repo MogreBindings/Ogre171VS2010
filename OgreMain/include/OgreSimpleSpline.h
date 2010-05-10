@@ -56,6 +56,8 @@ namespace Ogre {
 	class _OgreExport SimpleSpline
     {
     public:
+		DECLARE_CLRHANDLE;
+		
         SimpleSpline();
         ~SimpleSpline();
 

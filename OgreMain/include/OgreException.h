@@ -151,7 +151,7 @@ namespace Ogre {
 
         /** Gets the error code.
         */
-        virtual int getNumber(void) const throw();
+        virtual ExceptionCodes getNumber(void) const throw();
 
         /** Gets the source function.
         */
@@ -173,6 +173,12 @@ namespace Ogre {
 
 		/// Override std::exception::what
 		const char* what() const throw() { return getFullDescription().c_str(); }
+		
+				//Additions for Mogre
+		/** Retrieves a pointer to the last exception created.
+        */
+        static Exception* getLastException() throw();
+        static void clearLastException() throw();
         
     };
 

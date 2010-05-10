@@ -74,9 +74,11 @@ namespace Ogre {
 				through a generic interface.</li>
 			</ol>
     */
-	class _OgreExport Resource : public StringInterface, public ResourceAlloc
+	class _OgreExport Resource : public StringInterface, public ResourceAlloc, public CLRObject
     {
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Resource);
+		 
 		OGRE_AUTO_MUTEX // public to allow external locking
 		class Listener
 		{

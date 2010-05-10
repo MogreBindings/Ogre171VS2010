@@ -45,6 +45,8 @@ namespace Ogre {
 	/** Level of detail strategy based on pixel count approximation from bounding sphere projection. */
     class _OgreExport PixelCountLodStrategy : public LodStrategy, public Singleton<PixelCountLodStrategy>
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(PixelCountLodStrategy);
     protected:
         /// @copydoc LodStrategy::getValueImpl
         virtual Real getValueImpl(const MovableObject *movableObject, const Camera *camera) const;

@@ -59,9 +59,11 @@ namespace Ogre {
             This is an abstract class - concrete classes are based on this for specific purposes,
             e.g. SceneNode, Bone
     */
-    class _OgreExport Node : public NodeAlloc
+    class _OgreExport Node : public NodeAlloc, public CLRObject
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Node);
+		
         /** Enumeration denoting the spaces which a transform can be relative to.
         */
         enum TransformSpace

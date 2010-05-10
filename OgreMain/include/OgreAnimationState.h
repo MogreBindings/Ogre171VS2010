@@ -49,13 +49,13 @@ namespace Ogre {
         Other classes can hold instances of this class to store the state of any animations
         they are using.
     */
-	class _OgreExport AnimationState : public AnimationAlloc
+	class _OgreExport AnimationState : public AnimationAlloc, public CLRObject
     {
     public:
-
+	   DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(AnimationState);
+		
       /// typedef for an array of float values used as a bone blend mask
       typedef vector<float>::type BoneBlendMask;
-
         /// Normal constructor with all params supplied
         AnimationState(const String& animName, AnimationStateSet *parent, 
 			Real timePos, Real length, Real weight = 1.0, bool enabled = false);
@@ -183,6 +183,7 @@ namespace Ogre {
 	class _OgreExport AnimationStateSet : public AnimationAlloc
 	{
 	public:
+	     DECLARE_CLRHANDLE;
 		/// Mutex, public for external locking if needed
 		OGRE_AUTO_MUTEX
 		/// Create a blank animation state set

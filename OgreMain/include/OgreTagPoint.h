@@ -61,6 +61,8 @@ namespace Ogre	{
 	{
 
 	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(TagPoint);
+		
 		TagPoint(unsigned short handle, Skeleton* creator);
 		virtual ~TagPoint();
 

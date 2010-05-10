@@ -57,6 +57,8 @@ namespace Ogre {
     class _OgreExport SceneNode : public Node
     {
     public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(SceneNode);
+		
         typedef HashMap<String, MovableObject*> ObjectMap;
         typedef MapIterator<ObjectMap> ObjectIterator;
 		typedef ConstMapIterator<ObjectMap> ConstObjectIterator;

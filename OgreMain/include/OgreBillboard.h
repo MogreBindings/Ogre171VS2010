@@ -65,6 +65,9 @@ namespace Ogre {
 
 	class _OgreExport Billboard : public FXAlloc
     {
+	public:
+		DECLARE_CLRHANDLE;
+		
         friend class BillboardSet;
         friend class BillboardParticleRenderer;
     protected:

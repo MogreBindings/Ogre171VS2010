@@ -84,6 +84,9 @@ namespace Ogre {
     */
     class _OgreExport Skeleton : public Resource
     {
+	public:
+		DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(Skeleton);
+		
 		friend class SkeletonInstance;
 	protected:
 		/// Internal constructor for use by SkeletonInstance only

@@ -42,3 +42,4 @@ glob:lib/bin/debug/*.pdb
 glob:lib/bin/release/*.dll
 glob:lib/bin/debug/*.exe
 glob:lib/bin/release/*.exe
+glob:lib/*.opensdf

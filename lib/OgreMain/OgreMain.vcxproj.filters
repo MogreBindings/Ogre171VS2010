@@ -562,6 +562,9 @@
     <ClCompile Include="..\..\OgreMain\src\CLRObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\OgreMain\src\OgrePVRTCCodec.cpp">
+      <Filter>Missing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\OgreMain\include\asm_math.h">
@@ -1329,6 +1332,9 @@
     <ClInclude Include="..\..\OgreMain\include\CLRObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\OgreMain\include\OgrePVRTCCodec.h">
+      <Filter>Missing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\OgreMain\src\WIN32\OgreWin32Resources.rc">
@@ -1336,6 +1342,9 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Missing">
+      <UniqueIdentifier>{c70f4271-4114-495f-8e57-3d363b3109aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

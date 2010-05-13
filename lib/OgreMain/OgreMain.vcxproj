@@ -157,6 +157,7 @@
     <ClInclude Include="..\..\OgreMain\include\OgreBlendMode.h" />
     <ClInclude Include="..\..\OgreMain\include\OgreBone.h" />
     <ClInclude Include="..\..\OgreMain\include\OgreBorderPanelOverlayElement.h" />
+    <ClInclude Include="..\..\OgreMain\include\OgrePVRTCCodec.h" />
     <ClInclude Include="..\include\OgreBuildSettings.h" />
     <ClInclude Include="..\..\OgreMain\include\OgreCamera.h" />
     <ClInclude Include="..\..\OgreMain\include\OgreCodec.h" />
@@ -493,6 +494,7 @@
     <ClCompile Include="..\..\OgreMain\src\OgrePrefabFactory.cpp" />
     <ClCompile Include="..\..\OgreMain\src\OgreProfiler.cpp" />
     <ClCompile Include="..\..\OgreMain\src\OgreProgressiveMesh.cpp" />
+    <ClCompile Include="..\..\OgreMain\src\OgrePVRTCCodec.cpp" />
     <ClCompile Include="..\..\OgreMain\src\OgreQuaternion.cpp" />
     <ClCompile Include="..\..\OgreMain\src\OgreRectangle2D.cpp" />
     <ClCompile Include="..\..\OgreMain\src\OgreRenderQueue.cpp" />
